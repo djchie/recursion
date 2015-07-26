@@ -35,8 +35,6 @@ var stringifyJSON = function(obj) {
   if (obj.constructor === Object) {
   	var stringArray = new Array();
   	for (var key in obj) {
-  	  console.log("The key is: " + key);
-  	  console.log("The object is: " + obj[key]);
   	  if (obj[key] !== undefined && typeof(obj[key]) !== 'function') {
   	  	stringArray.push(stringifyJSON(key) + ":" + stringifyJSON(obj[key]));
   	  }
